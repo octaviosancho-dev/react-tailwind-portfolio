@@ -13,7 +13,7 @@ module.exports = {
         'light-text': '#B2B7E1'
       },
       fontFamily: {
-        sans: ['Ubuntu', 'sans-serif']
+        sans: ['Rubik', 'sans-serif']
       }
     },
   },
