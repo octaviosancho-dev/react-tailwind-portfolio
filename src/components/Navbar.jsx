@@ -1,14 +1,21 @@
 import React, {Fragment, useState} from 'react';
-import Mail from './svg/Mail';
+
 import Button from './Button';
 import Logo from './svg/Logo';
-import HamMenu from '../components/svg/HamMenu';
-import CloseMenu from './svg/CloseMenu';
-import HomeIcon from './svg/HomeIcon';
-import AboutIcon from '../components/svg/AboutIcon';
-import SkillsIcon from './svg/SkillsIcon';
-import WorkIcon from './svg/WorkIcon';
-import ContactIcon from './svg/ContactIcon';
+
+import Mail from './svg/Navigation/Mail';
+import HamMenu from '../components/svg/Navigation/HamMenu';
+import CloseMenu from './svg/Navigation/CloseMenu';
+import HomeIcon from './svg/Navigation/HomeIcon';
+import AboutIcon from '../components/svg/Navigation/AboutIcon';
+import SkillsIcon from './svg/Navigation/SkillsIcon';
+import WorkIcon from './svg/Navigation/WorkIcon';
+import ContactIcon from './svg/Navigation/ContactIcon';
+
+import LinkedIn from './svg/Social/Linkedin';
+import Github from './svg/Social/Github';
+import Resume from './svg/Social/Resume';
+
 import { Link } from 'react-scroll';
 
 const Navbar = () => {
@@ -54,7 +61,11 @@ const Navbar = () => {
             <Link to='/work' className='duration-300 hover:text-light-text cursor-pointer' onClick={ () => setMenu(!menu) }>My work</Link>
             <Link to='/contact' className='my-5' onClick={ () => setMenu(!menu) }><Button icon={<Mail/>} text={'Hire me!'} width={'w-[140px]'} height={'h-[45px]'}/></Link>
           </div>
-
+          <div className='flex flex-row justify-center gap-9 relative top-32'>
+            <a href='https://www.linkedin.com/in/octaviosancho-dev/' target='_blank' rel='noreferrer'><LinkedIn width={'31'}/></a>
+            <a href='https://github.com/octaviosancho-dev' target='_blank' rel='noreferrer'><Github width={'31'}/></a>
+            <a href='https://drive.google.com/file/d/1vuzu-KvwytBEqQARhJV592ETWhoAljQv/view?usp=sharing' target='_blank' rel='noreferrer'><Resume width={'37'}/></a>
+          </div>
         </div>
       </header>
 
