@@ -8,6 +8,27 @@ html, body {
 ::selection {
   background: #4e5380;
 }
+/* width */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #7b78a5;
+  border: 3px solid #202023;
+  border-radius: 100px;
+  width: 14px;
+}
+
+p > span {
+  @apply text-light-text font-medium
+}
 .logo:hover{
   transform:translateX(3%);
 }
@@ -22,9 +43,61 @@ html, body {
   box-shadow: 0px 0px 0 black;
   transform: translate(2%, 2%);
 }
+.nav-tooltip {
+  z-index: 100;
+}
 .nav-tooltip:hover span {
   opacity: 1;
+  z-index: 100;
 }
 .selected-dot {
   @apply flex justify-center items-center w-[62px] h-[62px] bg-purple p-2 m-auto border-solid border-black border-[3px] rounded-lg outline-none btn-shadow relative left-[-14px] duration-200 ease-in
+}
+
+.arrow{
+  animation: pushDown 2s ease-in-out infinite;
+}
+
+@keyframes pushDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  background-color: #979EDB;
+  width: 100px;
+  height: 8.5px;
+  border: 2.5px solid black;
+  border-radius: 3px;
+  box-shadow: 0.75px 1.5px 0 black;
+  z-index: 100;
+}
+@media screen and (min-width: 640px ) {
+  .section-title::after {
+    width: 105px;
+  }
+}
+@media screen and (min-width: 768px ) {
+  .section-title::after {
+    width: 130px;
+  }
+}
+@media screen and (min-width: 1100px ) {
+  .section-title::after {
+    width: 140px;
+  }
+}
+@media screen and (min-width: 1450px ) {
+  .section-title::after {
+    width: 165px;
+  }
 }

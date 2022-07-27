@@ -3,6 +3,16 @@ module.exports = {
     "./src/**/*.{js,jsx}",
   ],
   theme: {
+    screens: {
+      'sm': '640px',
+      // => @media (min-width: 640px) { ... }
+
+      'md': '768px',
+      // => @media (min-width: 768px) { ... }
+
+      'lg': '1450px',
+      // => @media (min-width: 1024px) { ... }
+    },
     extend: {
       colors: {
         'body': '#202023',
@@ -12,6 +22,9 @@ module.exports = {
         'input-border': '#5F6177',
         'text': '#EDEDED',
         'light-text': '#B2B7E1'
+      },
+      screens: {
+        'laptop': '1100px',
       },
       fontFamily: {
         sans: ['Rubik', 'sans-serif']
