@@ -31,9 +31,17 @@ const Navbar = () => {
   const [active, setActive] = useState(0);
   const [menu, setMenu] = useState(false);
 
+  const scrollBar = document.body;
+
+  if(menu) {
+    scrollBar.classList.add('no-scroll')
+  } else {
+    scrollBar.classList.remove('no-scroll')
+  }
+
   return (
     <Fragment>
-      <header className='z-20 w-11/12 md:w-10/12 bg-body mx-auto h-24 flex flex-row flex-nowrap justify-between px-8 lg:px-12'>
+      <header className='sticky bg-body w-full border-b border-b-[#2C2D37] top-0 z-20 md:relative md:w-10/12 md:bg-transparent mx-auto h-24 flex flex-row flex-nowrap justify-between px-8 lg:px-12'>
         <div className='w-[137px] my-auto duration-300 logo cursor-pointer z-10'>
           <Link to='/'><Logo/></Link>
         </div>
@@ -47,7 +55,7 @@ const Navbar = () => {
         <div className='hidden md:block my-auto z-20 laptop:hidden'>
           <Button icon={<Mail/>} width={'w-[45px]'} height={'h-[45px]'}/>
         </div>
-        <div className='z-20 w-max my-auto md:hidden' onClick={ () => setMenu(!menu) }>
+        <div className='z-50 w-max my-auto md:hidden' onClick={ () => setMenu(!menu) }>
           <Button icon={ menu ? <CloseMenu/> : <HamMenu/> } padding={'p-2'} width={'fit'}/>
         </div>
         <div className={`z-10 bg-[#2D2F45] w-[70vw] h-full duration-500 fixed top-0 ${menu ? 'left-0' : ' left-[-100vw]' } md:hidden `}>

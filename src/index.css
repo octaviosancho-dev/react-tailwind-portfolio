@@ -5,6 +5,9 @@
 html, body {
   scroll-behavior: smooth;
 }
+.no-scroll {
+  overflow-y: hidden;
+}
 ::selection {
   background: #4e5380;
 }
