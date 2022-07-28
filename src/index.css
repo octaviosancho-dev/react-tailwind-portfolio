@@ -2,9 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
-  scroll-behavior: smooth;
-}
+
 .no-scroll {
   overflow-y: hidden;
 }
@@ -101,6 +99,6 @@ p > span {
 }
 @media screen and (min-width: 1450px ) {
   .section-title::after {
-    width: 165px;
+    width: 130px;
   }
 }

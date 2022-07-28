@@ -5,8 +5,8 @@ import Mail from './svg/Navigation/Mail';
 
 const About = () => {
   return (
-    <>
-      <div className='flex-wrap w-3/4 mt-96 sm:mx-auto sm:mt-[500px] sm:w-4/6 mx-auto lg:flex-nowrap flex flex-row justify-between gap-10 lg:w-3/4'>
+    <div className='mb-48'>
+      <div id='about' className='flex-wrap w-3/4 mt-96 sm:mx-auto sm:mt-[500px] sm:w-4/6 mx-auto lg:flex-nowrap flex flex-row justify-between gap-10 lg:w-3/4'>
         <div className='w-full lg:w-4/5 text-gray-300'>
           <h2 className='mb-12 md:text-2xl lg:text-3xl font-bold text-text md:mb-24 section-title'>About me</h2>
           <div className='ml-0 sm:ml-10 md:ml-20'>
@@ -19,11 +19,11 @@ const About = () => {
           <img src={ProfilePic} alt='about-pic' className='w-80 lg:w-[550px] relative -top-8 -z-10'/>
         </div>
       </div>
-      <div className='top-6 lg:-top-16 w-full z-20 relative '>
+      <div className='top-6 lg:-top-16 w-full z-10 relative '>
         <Button text={'Get in touch'} icon={<Mail/>} height={'h-12'}/>
       </div>
       <div className='relative top-20 lg:top-0 w-1/3 h-1 mx-auto bg-[#242636] rounded-sm'></div>
-    </>
+    </div>
   )
 }
 
