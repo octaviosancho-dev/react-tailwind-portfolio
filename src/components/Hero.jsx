@@ -15,7 +15,7 @@ const Hero = () => {
 
   return (
     <div>
-      <h2></h2>
+      <h2> </h2>
       <div id='hero' className='flex flex-col justify-center'>
         <div className='mx-auto flex flex-row flex-nowrap justify-center items-center'>
           <div className='w-fit relative top-[20vh]'>

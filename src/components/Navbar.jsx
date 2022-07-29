@@ -29,6 +29,9 @@ const Navbar = () => {
   ];
 
   const [active, setActive] = useState(0);
+
+  document.addEventListener( 'DOMContentLoaded', () => setActive(0) );
+
   const [menu, setMenu] = useState(false);
 
   const scrollBar = document.body;
@@ -43,7 +46,7 @@ const Navbar = () => {
     const titles = [...document.querySelectorAll('h2')].sort((a, b) => {
       return Math.abs(a.getBoundingClientRect().top) - Math.abs(b.getBoundingClientRect().top);
     });
-    console.log(titles);
+    
     document.querySelectorAll(".selected-dot").forEach(c => c.classList.remove("selected-dot"));
     
     document.querySelectorAll(".nav-dot")[[...document.querySelectorAll('h2')].indexOf(titles[0])].classList.add("selected-dot");
@@ -107,7 +110,6 @@ const Navbar = () => {
             scroll={ el => scrollWithOffset(el) }
             to={route}
             key={index}
-            onClick={ () => setActive(index) }
             className='flex flex-row items-center gap-6 nav-tooltip cursor-pointer'
             >
               <div className={`nav-dot ${active === index ? 'selected-dot' : ''}`}>{icon}</div>
