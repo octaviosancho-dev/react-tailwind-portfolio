@@ -58,7 +58,7 @@ const Navbar = () => {
 
   const scrollWithOffset = el => {
     const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
-    const yOffset = -170; 
+    const yOffset = -120; 
     window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' });
   }
 
@@ -76,7 +76,7 @@ const Navbar = () => {
           <Link smooth scroll={ el => scrollWithOffset(el) } to='#contact' className='md:hidden laptop:block mx-5 z-20'><Button icon={<Mail/>} text={'Hire me!'} width={'w-[140px]'} height={'h-[45px]'}/></Link>
         </div>
         <div className='hidden md:block my-auto z-20 laptop:hidden'>
-          <Button icon={<Mail/>} width={'w-[45px]'} height={'h-[45px]'}/>
+          <Link smooth scroll={ el => scrollWithOffset(el) } to='#contact'><Button icon={<Mail/>} width={'w-[45px]'} height={'h-[45px]'}/></Link>
         </div>
         <div className='z-50 w-max my-auto md:hidden' onClick={ () => setMenu(!menu) }>
           <Button icon={ menu ? <CloseMenu/> : <HamMenu/> } padding={'p-2'} width={'fit'}/>
