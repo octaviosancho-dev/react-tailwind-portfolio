@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 
 import Button from './Button';
 import Illustration from './svg/Skills/Illustration';
@@ -22,10 +23,10 @@ import CsharpSVG from './svg/Skills/CsharpSVG';
 import DotNetSVG from './svg/Skills/DotNetSVG';
 import SqlSVG from './svg/Skills/SqlSVG';
 
-const Skills = () => {
+const Skills = ({isVisible}) => {
 
   const filters = [
-    {text: 'All', filter: null}, 
+    {text: 'All', filter: undefined}, 
     {text: 'Programming', filter: 'programming'},
     {text: 'Front-End', filter: 'front'},
     {text: 'Back-End', filter: 'back'},
@@ -34,32 +35,51 @@ const Skills = () => {
     {text: 'Database', filter: 'database'}
   ];
 
-  const skills = [
-    {icon: <JavaScriptSVG/>, name: 'JavaScript', level: 'Advanced', type: ['front', 'programming']},
-    {icon: <ReactSVG/>, name: 'React JS', level: 'Advanced', type: ['front', 'library', 'programming']},
-    {icon: <NodeSVG/>, name: 'Node JS', level: 'Basic', type: ['back', 'programming']},
-    {icon: <FigmaSVG/>, name: 'Figma', level: 'Intermediate', type: ['design']},
-    {icon: <OopSVG/>, name: 'OOP', level: 'Intermediate', type: ['front', 'back', 'programming']},
-    {icon: <JquerySVG/>, name: 'jQuery', level: 'Basic', type: ['library', 'programming']},
-    {icon: <JsonSVG/>, name: 'JSON', level: 'Intermediate', type: ['programming']},
-    {icon: <SassSVG/>, name: 'Sass', level: 'Intermediate', type: ['front']},
-    {icon: <GitSVG/>, name: 'Git', level: 'Advanced', type: ['programming']},
-    {icon: <CssSVG/>, name: 'CSS3', level: 'Advanced', type: ['front']},
-    {icon: <HtmlSVG/>, name: 'HTML5', level: 'Advanced', type: ['front']},
-    {icon: <BootstrapSVG/>, name: 'Bootstrap', level: 'Intermediate', type: ['front', 'library']},
-    {icon: <FirebaseSVG/>, name: 'Firebase', level: 'Intermediate', type: ['programming', 'database']},
-    {icon: <TailwindSVG/>, name: 'Tailwind.css', level: 'Advanced', type: ['front', 'library']},
-    {icon: <CsharpSVG/>, name: 'C#', level: 'Intermediate', type: ['programming', 'back']},
-    {icon: <DotNetSVG/>, name: '.NET', level: 'Intermediate', type: ['programming', 'back', 'library']},
-    {icon: <SqlSVG/>, name: 'SQL', level: 'Intermediate', type: ['database']}
-  ];
+  
 
-  const [selected, setSelected] = useState(null);
+  const [selected, setSelected] = useState(undefined);
 
   const setFilters = (filter) => {
     setSelected(filter);
-    
   }
+
+  const [skillGroup, setSkillGroup] = useState([]);
+
+  useEffect( () => {
+
+    const skills = [
+      {icon: <JavaScriptSVG/>, name: 'JavaScript', level: 'Advanced', type: ['front', 'programming']},
+      {icon: <ReactSVG/>, name: 'React JS', level: 'Advanced', type: ['front', 'library', 'programming']},
+      {icon: <NodeSVG/>, name: 'Node JS', level: 'Basic', type: ['back', 'programming']},
+      {icon: <FigmaSVG/>, name: 'Figma', level: 'Intermediate', type: ['design']},
+      {icon: <OopSVG/>, name: 'OOP', level: 'Intermediate', type: ['front', 'back', 'programming']},
+      {icon: <JquerySVG/>, name: 'jQuery', level: 'Basic', type: ['library', 'programming']},
+      {icon: <JsonSVG/>, name: 'JSON', level: 'Intermediate', type: ['programming']},
+      {icon: <SassSVG/>, name: 'Sass', level: 'Intermediate', type: ['front']},
+      {icon: <GitSVG/>, name: 'Git', level: 'Advanced', type: ['programming']},
+      {icon: <CssSVG/>, name: 'CSS3', level: 'Advanced', type: ['front']},
+      {icon: <HtmlSVG/>, name: 'HTML5', level: 'Advanced', type: ['front']},
+      {icon: <BootstrapSVG/>, name: 'Bootstrap', level: 'Intermediate', type: ['front', 'library']},
+      {icon: <FirebaseSVG/>, name: 'Firebase', level: 'Intermediate', type: ['programming', 'database']},
+      {icon: <TailwindSVG/>, name: 'Tailwind.css', level: 'Advanced', type: ['front', 'library']},
+      {icon: <CsharpSVG/>, name: 'C#', level: 'Intermediate', type: ['programming', 'back']},
+      {icon: <DotNetSVG/>, name: '.NET', level: 'Intermediate', type: ['programming', 'back', 'library']},
+      {icon: <SqlSVG/>, name: 'SQL', level: 'Intermediate', type: ['database']}
+    ];
+
+    let filteredArray = [];
+
+    [...skills].forEach( skill => {
+      const {icon, name, level, type} = skill;
+      
+      if(type.find( (element) => element === selected) === selected) {
+        filteredArray.push({icon, name, level});
+      }
+    })
+
+    setSkillGroup(filteredArray);
+  }, [selected])
+
 
   return (
     <div id='skills' className='flex-wrap w-3/4 sm:mx-auto mx-auto lg:flex-nowrap flex flex-row justify-between gap-10 lg:w-3/4'>
@@ -77,20 +97,20 @@ const Skills = () => {
 
         </div>
         <div className='w-[85%] mx-auto flex flex-row justify-center my-12 lg:justify-between items-center'>
-          <div className='min-w-3/4 min-h-[500px] max-h-[720px] bg-[#24252B] rounded-lg flex flex-row flex-wrap justify-start items-center gap-8 p-8 z-30 lg:w-1/2'>
+          <div className='min-w-[508px] min-h-[605px] max-h-[720px] bg-[#24252B] rounded-lg flex flex-row flex-wrap justify-start items-start content-start gap-8 p-8 z-10 lg:w-1/2'>
             {
-              skills.map( (skill, index) => {
-                const {icon, name, level, type} = skill;
+              skillGroup.map( (skill, index) => {
+                const {icon, name, level} = skill;
 
-                return (
-                  <div className='cursor-pointer w-fit h-fit flex flex-col items-center mt-5 nav-tooltip'>
-                    <div className='relative -top-10 -left-[33px] w-0 h-0 mx-auto opacity-0 duration-200'>
-                      <Tooltip text={level}/>
-                    </div>
-                    {icon}
-                    <h4 className='text-xs mt-3'>{name}</h4>
-                  </div>
-                )
+                  return (
+                    <motion.div initial={{opacity: 0}} animate={{ opacity: 1 }} key={index} className='cursor-pointer w-fit h-fit flex flex-col items-center mt-5 nav-tooltip'>
+                      <div className='relative -top-10 -left-[33px] w-0 h-0 mx-auto opacity-0 duration-200'>
+                        <Tooltip text={level}/>
+                      </div>
+                      {icon}
+                      <h4 className='text-xs mt-3'>{name}</h4>
+                    </motion.div>
+                  )
               })
             }
           </div>
