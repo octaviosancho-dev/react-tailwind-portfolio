@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 import Button from './Button';
 import Illustration from './svg/Skills/Illustration';
@@ -97,22 +97,22 @@ const Skills = ({isVisible}) => {
 
         </div>
         <div className='w-[85%] mx-auto flex flex-row justify-center my-12 lg:justify-between items-center'>
-          <div className='min-w-[508px] min-h-[605px] max-h-[720px] bg-[#24252B] rounded-lg flex flex-row flex-wrap justify-start items-start content-start gap-8 p-8 z-10 lg:w-1/2'>
-            {
-              skillGroup.map( (skill, index) => {
-                const {icon, name, level} = skill;
+          <div className='min-w-[508px] min-h-[575px] max-h-[720px] bg-[#24252B] rounded-lg flex flex-row flex-wrap justify-start items-start content-start gap-8 p-8 z-10 lg:w-1/2'>
+          <AnimatePresence>
+            { skillGroup.map( (skill, index) => {
+              const {icon, name, level} = skill;
 
-                  return (
-                    <motion.div initial={{opacity: 0}} animate={{ opacity: 1 }} key={index} className='cursor-pointer w-fit h-fit flex flex-col items-center mt-5 nav-tooltip'>
-                      <div className='relative -top-10 -left-[33px] w-0 h-0 mx-auto opacity-0 duration-200'>
-                        <Tooltip text={level}/>
-                      </div>
-                      {icon}
-                      <h4 className='text-xs mt-3'>{name}</h4>
-                    </motion.div>
-                  )
-              })
-            }
+                return (
+                  <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} key={index} className='cursor-pointer w-fit h-fit flex flex-col items-center mt-5 nav-tooltip'>
+                    <div className='relative -top-10 -left-[33px] w-0 h-0 mx-auto opacity-0 duration-200'>
+                      <Tooltip text={level}/>
+                    </div>
+                    {icon}
+                    <h4 className='text-xs mt-3'>{name}</h4>
+                  </motion.div>
+                )
+            }) }
+          </AnimatePresence>  
           </div>
           <div className='hidden lg:block'>
             <Illustration/>
