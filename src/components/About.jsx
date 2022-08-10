@@ -1,6 +1,6 @@
 import React from 'react';
 import ProfilePic from '../assets/img/about-image.png';
-import Button from './Button';
+import Button from './helpers/Button';
 import Mail from './svg/Navigation/Mail';
 
 import { HashLink as Link } from 'react-router-hash-link';

@@ -1,4 +1,4 @@
-import Particles from './components/Particles';
+import Particles from './components/helpers/Particles';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';

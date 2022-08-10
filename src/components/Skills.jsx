@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-import Button from './Button';
+import Button from './helpers/Button';
 import Illustration from './svg/Skills/Illustration';
-import Tooltip from './Tooltip';
+import Tooltip from './helpers/Tooltip';
 
 import JavaScriptSVG from './svg/Skills/JavaScriptSVG';
 import ReactSVG from './svg/Skills/ReactSVG';

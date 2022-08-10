@@ -1,6 +1,6 @@
 import React, {Fragment, useState} from 'react';
 
-import Button from './Button';
+import Button from './helpers/Button';
 import Logo from './svg/Logo';
 
 import Mail from './svg/Navigation/Mail';
@@ -25,7 +25,7 @@ const Navbar = () => {
     {route: '#about', icon: <AboutIcon/>, name: 'About me'},
     {route: '#skills', icon: <SkillsIcon/>, name: 'Skills'},
     {route: '#work', icon: <WorkIcon/>, name: 'My Work'},
-    {route: '#contact', icon: <ContactIcon/>, name: 'Contact me'},
+    {route: '#contact', icon: <ContactIcon/>, name: 'Contact me'}
   ];
 
   const [active, setActive] = useState(0);
@@ -37,18 +37,16 @@ const Navbar = () => {
   const scrollBar = document.body;
 
   if(menu) {
-    scrollBar.classList.add('no-scroll')
+    scrollBar.classList.add('no-scroll');
   } else {
-    scrollBar.classList.remove('no-scroll')
+    scrollBar.classList.remove('no-scroll');
   }
 
   function updateList() {
     const titles = [...document.querySelectorAll('h2')].sort((a, b) => {
       return Math.abs(a.getBoundingClientRect().top) - Math.abs(b.getBoundingClientRect().top);
     });
-    
     document.querySelectorAll(".selected-dot").forEach(c => c.classList.remove("selected-dot"));
-    
     document.querySelectorAll(".nav-dot")[[...document.querySelectorAll('h2')].indexOf(titles[0])].classList.add("selected-dot");
   }
 
