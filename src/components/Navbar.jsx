@@ -64,7 +64,7 @@ const Navbar = () => {
 
   return (
     <Fragment>
-      <header className='sticky bg-body w-full border-b border-b-[#2C2D37] top-0 z-20 md:relative md:w-10/12 md:bg-transparent mx-auto h-24 flex flex-row flex-nowrap justify-between px-8 lg:px-12'>
+      <header className='sticky bg-body w-full border-b border-b-[#2C2D37] top-0 z-[100] md:relative md:w-10/12 md:bg-transparent mx-auto h-24 flex flex-row flex-nowrap justify-between px-8 lg:px-12'>
         <div className='w-[137px] my-auto duration-300 logo cursor-pointer z-10'>
           <Link smooth to='#'><Logo/></Link>
         </div>
@@ -78,10 +78,10 @@ const Navbar = () => {
         <div className='hidden md:block my-auto z-20 laptop:hidden'>
           <Link smooth scroll={ el => scrollWithOffset(el) } to='#contact'><Button icon={<Mail/>} width={'w-[45px]'} height={'h-[45px]'}/></Link>
         </div>
-        <div className='z-50 w-max my-auto md:hidden' onClick={ () => setMenu(!menu) }>
+        <div className='z-[100] w-max my-auto md:hidden' onClick={ () => setMenu(!menu) }>
           <Button icon={ menu ? <CloseMenu/> : <HamMenu/> } padding={'p-2'} width={'fit'}/>
         </div>
-        <div className={`z-50 bg-[#2D2F45] w-[70vw] h-full duration-500 fixed top-0 ${menu ? 'left-0' : ' left-[-100vw]' } md:hidden `}>
+        <div className={`z-[100] bg-[#2D2F45] w-[70vw] h-full duration-500 fixed top-0 ${menu ? 'left-0' : ' left-[-100vw]' } md:hidden `}>
           <div className='w-[137px] z- my-auto relative top-8 left-14 cursor-pointer'>
             <Link smooth to='#' onClick={ () => setMenu(!menu) }><Logo/></Link>
           </div>
