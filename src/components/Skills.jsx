@@ -23,7 +23,7 @@ import CsharpSVG from './svg/Skills/CsharpSVG';
 import DotNetSVG from './svg/Skills/DotNetSVG';
 import SqlSVG from './svg/Skills/SqlSVG';
 
-const Skills = ({isVisible}) => {
+const Skills = () => {
 
   const filters = [
     {text: 'All', filter: undefined}, 
@@ -91,8 +91,8 @@ const Skills = ({isVisible}) => {
             {filters.map( (option, index) => {
               const {text, filter} = option;
               return (
-              <span onClick={ () => setFilters(filter) } className={`max-h-[75px] ${filter === selected ? 'selected-filter z-40' : null }`}>
-                <Button key={index} text={text} fontSize={'text-[8px] md:text-[12px]'} fontWeight={'font-normal'} rounded={'rounded-full'} width={'w-max'} padding={'px-2 sm:px-4'} height={'h-[20px] md:h-[30px]'} borderBackground={'bg-transparent border-[#4956D2]'}/>
+              <span onClick={ () => setFilters(filter) } className={`max-h-[75px] ${filter === selected ? 'selected-filter z-50' : null }`}>
+                <Button key={index} text={text} fontSize={'!text-[8px] md:!text-[12px]'} fontWeight={'font-normal'} rounded={'!rounded-full'} width={'w-max'} padding={'px-2 sm:px-4'} height={'h-[20px] md:h-[30px]'} borderBackground={'!bg-transparent !border-[#4956D2]'}/>
               </span>)
             } )}
 

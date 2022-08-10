@@ -38,8 +38,6 @@ useEffect( () => {
 
 }, [])
 
-
-
   return (
     <Fragment>
     { loading ? <Spinner/> : 
