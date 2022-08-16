@@ -63,6 +63,37 @@ p > span {
   animation: pushDown 2s ease-in-out infinite;
 }
 
+.msgContainer {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+.successMsg {
+  background-color: #abcfbb;
+  color: #30975b;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+.successMsg > h5 {
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.errorMsg {
+  background-color: #cfabab;
+  color: #973030;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+.errorMsg > h5 {
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+}
+
 @keyframes pushDown {
   0% {
     transform: translateY(0);
