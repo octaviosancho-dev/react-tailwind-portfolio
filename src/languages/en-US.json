@@ -1,0 +1,71 @@
+{
+  
+  "navbar-home": "Home",
+  "navbar-about": "About me",
+  "navbar-skills": "Tech skills",
+  "navbar-work": "My work",
+  "navbar-hire": "Hire me!",
+  
+  "side-home": "Home",
+  "side-about": "About me",
+  "side-skills": "Skills",
+  "side-work": "My work",
+  "side-contact": "Contact me",
+
+  "hero-section": {
+    "title": "Software Developer",
+    "paragraph": "Hello there! I am Octavio,",
+    "other": "Front-End Developer | Programmer | Web Designer"
+  },
+
+  "about-section": {
+    "title": "About me",
+    "first-paragraph": "Hi! My name is Octavio Sancho, I am a 25 years old Software and Web Developer based in Buenos Aires, Argentina.",
+    "second-paragraph": "I have 1 year of experience creating Websites and developing Software Applications, I always keep myself learning new Skills. I usually work with ReactJS, JavaScript, Tailwind.css, Sass, and other technologies.",
+    "third-paragraph": "I truly believe that my strong points lies in development and research , but also I really love designing the applications I create. Currently, I am looking for my first IT experience in a company, I want to scale up my skills and grow as professional."
+  },
+
+  "skills-section": {
+    "title": "Tech Skills",
+    "filters": {
+      "all": "All",
+      "programming": "Programming",
+      "libraries": "Frameworks/Libraries",
+      "design": "Design",
+      "database": "Database"
+    },
+    "tooltip": {
+      "basic": "Basic",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced"
+    }
+  },
+
+  "work-section": {
+    "title": "My work",
+    "projects": {
+      "technologies": "Used technologies:",
+      "site-btn": "Visit Site",
+      "code-btn": "Code"
+    }
+  },
+
+  "contact-section": {
+    "title": "Get in touch",
+    "form": {
+      "label": "Contact me!",
+      "placeholder": {
+        "name": "Full name",
+        "email": "E-Mail",
+        "subject": "Subject",
+        "message": "Message..."
+      },
+      "send-btn": "Send"
+    }
+  },
+
+  "footer": {
+    "design": "Designed in",
+    "development": "Developed in"
+  }
+}
