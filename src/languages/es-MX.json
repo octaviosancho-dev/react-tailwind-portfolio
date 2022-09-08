@@ -12,60 +12,38 @@
   "side-work": "Proyectos",
   "side-contact": "Contacto",
 
-  "hero-section": {
-    "title": "Desarrollador de Software",
-    "paragraph": "Hola! Soy Octavio,",
-    "other": "Desarrollador Front-End | Programador | Diseñador Web"
-  },
+  "hero-title": "Desarrollador de Software",
+  "hero-paragraph": "Hola! Soy Octavio,",
+  "hero-other": "Desarrollador Front-End | Programador | Diseñador Web",
 
-  "about-section": {
-    "title": "Sobre mi",
-    "first-paragraph": "Hola! Mi nombre es Octavio Sancho, soy un Desarrollador de Software de 25 años de edad, residiendo en Buenos Aires, Argentina.",
-    "second-paragraph": "Poseo 1 año de experiencia creando Sitios y Aplicaciones Web, siempre me gusta mantenerme aprendiendo nuevas habilidades. Usualmente trabajo con ReactJS, JavaScript, Tailwind.css, Sass, y otras tecnologías similares.",
-    "third-paragraph": "Realmente creo que mis puntos fuertes residen en el desarrollo e investigacion, pero tambien disfruto mucho diseñar las aplicaciones que desarrollo. Actualmente estoy buscando mi primer experiencia en el mundo IT, quiero escalar mis habilidades y crecer como profesional."
-  },
+  "about-title": "Sobre mi",
+  "about-first-paragraph": "Hola! Mi nombre es Octavio Sancho, soy un Desarrollador de Software de 25 años de edad, residiendo en Buenos Aires, Argentina.",
+  "about-second-paragraph": "Poseo 1 año de experiencia creando Sitios y Aplicaciones Web, siempre me gusta mantenerme aprendiendo nuevas habilidades. Usualmente trabajo con ReactJS, JavaScript, Tailwind.css, Sass, y otras tecnologías similares.",
+  "about-third-paragraph": "Realmente creo que mis puntos fuertes residen en el desarrollo e investigacion, pero tambien disfruto mucho diseñar las aplicaciones que desarrollo. Actualmente estoy buscando mi primer experiencia en el mundo IT y focalizandome en dominar tecnologias Back-End. Quiero escalar mis habilidades y crecer como profesional.",
 
-  "skills-section": {
-    "title": "Habilidades técnicas",
-    "filters": {
-      "all": "Todos",
-      "programming": "Programación",
-      "libraries": "Frameworks/Librerías",
-      "design": "Diseño",
-      "database": "Bases de datos"
-    },
-    "tooltip": {
-      "basic": "Básico",
-      "intermediate": "Intermedio",
-      "advanced": "Avanzado"
-    }
-  },
+  "skills-title": "Tecnologías",
+  "filter-all": "Todos",
+  "filter-programming": "Programación",
+  "filter-libraries": "Frameworks/Librerías",
+  "filter-design": "Diseño",
+  "filter-database": "Bases de datos",
+  "tooltip-basic": "Básico",
+  "tooltip-intermediate": "Intermedio",
+  "tooltip-advanced": "Avanzado",
 
-  "work-section": {
-    "title": "Proyectos",
-    "projects": {
-      "technologies": "Tecnologías utilizadas:",
-      "site-btn": "Visitar Sitio",
-      "code-btn": "Código"
-    }
-  },
+  "work-title": "Proyectos",
+  "project-technologies": "Tecnologías utilizadas:",
+  "project-site-btn": "Visitar Sitio",
+  "project-code-btn": "Código",
 
-  "contact-section": {
-    "title": "Contacto",
-    "form": {
-      "label": "Contácteme!",
-      "placeholder": {
-        "name": "Nombre completo",
-        "email": "Correo",
-        "subject": "Asunto",
-        "message": "Mensaje..."
-      },
-      "send-btn": "Enviar"
-    }
-  },
+  "contact-title": "Contacto",
+  "form-label": "Contácteme!",
+  "placeholder-name": "Nombre completo",
+  "placeholder-email": "Correo",
+  "placeholder-subject": "Asunto",
+  "placeholder-message": "Mensaje...",
+  "send-btn": "Enviar",
 
-  "footer": {
-    "design": "Diseñado en",
-    "development": "Desarrollado en"
-  }
+  "footer-design": "Diseñado en",
+  "footer-development": "Desarrollado en"
 }

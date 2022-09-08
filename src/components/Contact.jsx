@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
+import { FormattedMessage } from 'react-intl';
 
 import Button from '../components/helpers/Button';
 import Mail from '../components/svg/Navigation/Mail';
@@ -88,9 +89,9 @@ const Contact = () => {
     <>
       <div id='contact' className='flex-wrap w-3/4 mt-36 sm:mx-auto mx-auto lg:flex-nowrap flex flex-row justify-between gap-10 lg:w-3/4'>
         <div className='z-50 w-full text-gray-300'>
-          <h2 className='mb-12 w-3/4 md:text-2xl lg:text-3xl font-bold text-text md:mb-12 section-title'>Get in touch</h2>
+          <h2 className='mb-12 w-3/4 md:text-2xl lg:text-3xl font-bold text-text md:mb-12 section-title'><FormattedMessage id='contact-title' defaultMessage='Get in touch'/></h2>
           <div className='bg-[#24252B] w-full sm:w-4/5 rounded-lg flex justify-center items-center flex-col mx-auto mb-11 p-5'>
-            <h3 className='text-lg sm:text-2xl font-medium w-1/2 mb-10'>Contact me!</h3>
+            <h3 className='text-lg sm:text-2xl font-medium w-1/2 mb-10'><FormattedMessage id='form-label' defaultMessage='Contact me!'/></h3>
 
             <form onSubmit={ onSubmit } className='flex flex-col justify-center outline-none w-4/5 text-xs sm:text-sm gap-10 laptop:w-1/2 '>
               <input
@@ -98,7 +99,7 @@ const Contact = () => {
               name='name'
               value={mail.name}
               onChange={handleOnChange}
-              placeholder='Full Name'
+              placeholder={<FormattedMessage id='placeholder-name' defaultMessage='Full Name'/>}
               className='bg-[#202023] outline-none rounded-md h-9 p-3 border-[#5F6177] border-[3px] input-shadow'
               />
               <input
@@ -106,7 +107,7 @@ const Contact = () => {
               name='email'
               value={mail.email}
               onChange={handleOnChange}
-              placeholder='E-Mail'
+              placeholder={<FormattedMessage id='placeholder-email' defaultMessage='E-Mail'/>}
               className='bg-[#202023] outline-none rounded-md h-9 p-3 border-[#5F6177] border-[3px] input-shadow'
               />
               <input
@@ -114,7 +115,7 @@ const Contact = () => {
               name='subject'
               value={mail.subject}
               onChange={handleOnChange}
-              placeholder='Subject'
+              placeholder={<FormattedMessage id='placeholder-subject' defaultMessage='Subject'/>}
               className='bg-[#202023] outline-none rounded-md h-9 p-3 border-[#5F6177] border-[3px] input-shadow'
               />
               <textarea
@@ -123,14 +124,14 @@ const Contact = () => {
               value={mail.message}
               onChange={handleOnChange}
               style={{resize: 'none'}}
-              placeholder='Message...'
+              placeholder={<FormattedMessage id='placeholder-message' defaultMessage='Message...'/>}
               className='text-start bg-[#202023] outline-none rounded-md p-3 border-[#5F6177] border-[3px] input-shadow h-36'
               ></textarea>
               
               { error ? <ErrorMsg/> : null }
               { success ? <SuccessMsg/> : null }
 
-              { spinner ? <Spinner/> : <Button submit={'submit'} text={'Send'} icon={<Mail/>} fontSize={'!text-sm sm:!text-md '} fontWeight={'font-normal'} width={'!w-24 sm:!w-36'} height={'!h-10 sm:!h-12'}/> }
+              { spinner ? <Spinner/> : <Button submit={'submit'} text={<FormattedMessage id='send-btn' defaultMessage='Send'/>} icon={<Mail/>} fontSize={'!text-sm sm:!text-md '} fontWeight={'font-normal'} width={'!w-24 sm:!w-36'} height={'!h-10 sm:!h-12'}/> }
               
             </form>
 
@@ -146,10 +147,10 @@ const Contact = () => {
         </div>
       </div>
       <div className='z-50 relative w-full h-6 bg-[#31313E] mx-auto flex flex-row items-center justify-center gap-3 text-xs font-light'>
-        <h4>Designed in</h4>
+        <h4><FormattedMessage id='footer-design' defaultMessage='Designed in'/></h4>
         <a href="https://www.figma.com/file/DeJNT9bq6ckD7OQRnavDYl/Portfolio?node-id=0%3A1" target='_blank' rel="noreferrer"><FigmaLogo/></a>
         <span>/</span>
-        <h4>Developed in</h4>
+        <h4><FormattedMessage id='footer-development' defaultMessage='Developed in'/></h4>
         <a href="https://github.com/octaviosancho-dev/react-tailwind-portfolio" target='_blank' rel="noreferrer"><ReactLogo/></a>
       </div>
     </>

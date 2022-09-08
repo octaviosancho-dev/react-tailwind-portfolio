@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
+import { FormattedMessage } from 'react-intl';
+
 import Button from './helpers/Button';
 import Illustration from './svg/Skills/Illustration';
 import Tooltip from './helpers/Tooltip';
@@ -26,13 +28,13 @@ import SqlSVG from './svg/Skills/SqlSVG';
 const Skills = () => {
 
   const filters = [
-    {text: 'All', filter: undefined}, 
-    {text: 'Programming', filter: 'programming'},
+    {text: <FormattedMessage id='filter-all' defaultMessage='All'/>, filter: undefined}, 
+    {text: <FormattedMessage id='filter-programming' defaultMessage='Programming'/>, filter: 'programming'},
     {text: 'Front-End', filter: 'front'},
     {text: 'Back-End', filter: 'back'},
-    {text: 'Frameworks/Libraries', filter: 'library'},
-    {text: 'Design', filter: 'design'},
-    {text: 'Database', filter: 'database'}
+    {text: <FormattedMessage id='filter-libraries' defaultMessage='Frameworks/Libraries'/>, filter: 'library'},
+    {text: <FormattedMessage id='filter-design' defaultMessage='Design'/>, filter: 'design'},
+    {text: <FormattedMessage id='filter-database' defaultMessage='Database'/>, filter: 'database'}
   ];
 
   
@@ -48,23 +50,23 @@ const Skills = () => {
   useEffect( () => {
 
     const skills = [
-      {icon: <JavaScriptSVG/>, name: 'JavaScript', level: 'Advanced', type: ['front', 'programming']},
-      {icon: <ReactSVG/>, name: 'React JS', level: 'Advanced', type: ['front', 'library', 'programming']},
-      {icon: <NodeSVG/>, name: 'Node JS', level: 'Basic', type: ['back', 'programming']},
-      {icon: <FigmaSVG/>, name: 'Figma', level: 'Intermediate', type: ['design']},
-      {icon: <OopSVG/>, name: 'OOP', level: 'Intermediate', type: ['front', 'back', 'programming']},
-      {icon: <JquerySVG/>, name: 'jQuery', level: 'Basic', type: ['library', 'programming']},
-      {icon: <JsonSVG/>, name: 'JSON', level: 'Intermediate', type: ['programming']},
-      {icon: <SassSVG/>, name: 'Sass', level: 'Intermediate', type: ['front']},
-      {icon: <GitSVG/>, name: 'Git', level: 'Advanced', type: ['programming']},
-      {icon: <CssSVG/>, name: 'CSS3', level: 'Advanced', type: ['front']},
-      {icon: <HtmlSVG/>, name: 'HTML5', level: 'Advanced', type: ['front']},
-      {icon: <BootstrapSVG/>, name: 'Bootstrap', level: 'Intermediate', type: ['front', 'library']},
-      {icon: <FirebaseSVG/>, name: 'Firebase', level: 'Intermediate', type: ['programming', 'database']},
-      {icon: <TailwindSVG/>, name: 'Tailwind.css', level: 'Advanced', type: ['front', 'library']},
-      {icon: <CsharpSVG/>, name: 'C#', level: 'Intermediate', type: ['programming', 'back']},
-      {icon: <DotNetSVG/>, name: '.NET', level: 'Intermediate', type: ['programming', 'back', 'library']},
-      {icon: <SqlSVG/>, name: 'SQL', level: 'Intermediate', type: ['database']}
+      {icon: <JavaScriptSVG/>, name: 'JavaScript', level: <FormattedMessage id='tooltip-advanced' defaultMessage='Advanced'/>, type: ['front', 'programming']},
+      {icon: <ReactSVG/>, name: 'React JS', level: <FormattedMessage id='tooltip-advanced' defaultMessage='Advanced'/>, type: ['front', 'library', 'programming']},
+      {icon: <NodeSVG/>, name: 'Node JS', level: <FormattedMessage id='tooltip-basic' defaultMessage='Basic'/>, type: ['back', 'programming']},
+      {icon: <FigmaSVG/>, name: 'Figma', level: <FormattedMessage id='tooltip-intermediate' defaultMessage='Intermediate'/>, type: ['design']},
+      {icon: <OopSVG/>, name: 'OOP', level: <FormattedMessage id='tooltip-intermediate' defaultMessage='Intermediate'/>, type: ['front', 'back', 'programming']},
+      {icon: <JquerySVG/>, name: 'jQuery', level: <FormattedMessage id='tooltip-basic' defaultMessage='Basic'/>, type: ['library', 'programming']},
+      {icon: <JsonSVG/>, name: 'JSON', level: <FormattedMessage id='tooltip-intermediate' defaultMessage='Intermediate'/>, type: ['programming']},
+      {icon: <SassSVG/>, name: 'Sass', level: <FormattedMessage id='tooltip-intermediate' defaultMessage='Intermediate'/>, type: ['front']},
+      {icon: <GitSVG/>, name: 'Git', level: <FormattedMessage id='tooltip-advanced' defaultMessage='Advanced'/>, type: ['programming']},
+      {icon: <CssSVG/>, name: 'CSS3', level: <FormattedMessage id='tooltip-advanced' defaultMessage='Advanced'/>, type: ['front']},
+      {icon: <HtmlSVG/>, name: 'HTML5', level: <FormattedMessage id='tooltip-advanced' defaultMessage='Advanced'/>, type: ['front']},
+      {icon: <BootstrapSVG/>, name: 'Bootstrap', level: <FormattedMessage id='tooltip-intermediate' defaultMessage='Intermediate'/>, type: ['front', 'library']},
+      {icon: <FirebaseSVG/>, name: 'Firebase', level: <FormattedMessage id='tooltip-intermediate' defaultMessage='Intermediate'/>, type: ['programming', 'database']},
+      {icon: <TailwindSVG/>, name: 'Tailwind.css', level: <FormattedMessage id='tooltip-advanced' defaultMessage='Advanced'/>, type: ['front', 'library']},
+      {icon: <CsharpSVG/>, name: 'C#', level: <FormattedMessage id='tooltip-intermediate' defaultMessage='Intermediate'/>, type: ['programming', 'back']},
+      {icon: <DotNetSVG/>, name: '.NET', level: <FormattedMessage id='tooltip-intermediate' defaultMessage='Intermediate'/>, type: ['programming', 'back', 'library']},
+      {icon: <SqlSVG/>, name: 'SQL', level: <FormattedMessage id='tooltip-intermediate' defaultMessage='Intermediate'/>, type: ['database']}
     ];
 
     let filteredArray = [];
@@ -85,7 +87,7 @@ const Skills = () => {
     <>
       <div id='skills' className='flex-wrap w-3/4 sm:mx-auto mx-auto lg:flex-nowrap flex flex-row justify-between gap-10 lg:w-3/4'>
         <div className='w-full text-gray-300'>
-          <h2 className='w-2/3 mb-6 md:text-2xl lg:text-3xl font-bold text-text md:mb-6 lg:mb-12 section-title'>Tech Skills</h2>
+          <h2 className='w-2/3 mb-6 md:text-2xl lg:text-3xl font-bold text-text md:mb-6 lg:mb-12 section-title'><FormattedMessage id='skills-title' defaultMessage='Tech Skills'/></h2>
           <div className='flex flex-wrap w-full gap-x-2 laptop:w-3/4 laptop:flex-nowrap flex-row justify-center mx-auto z-50 text-text md:gap-x-6 gap-y-4'>
 
             {filters.map( (option, index) => {

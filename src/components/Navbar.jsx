@@ -148,7 +148,7 @@ const Navbar = () => {
       </header>
       
       {/*Sidebar*/}
-      <nav className='hidden laptop:flex flex-col justify-between items-start fixed top-60 w-12 h-max pl-20 gap-14'>
+      <nav className='hidden laptop:flex flex-col justify-between items-start fixed top-[30%] w-12 h-max pl-20 gap-14'>
         {sections.map( (section, index) => {
           const {route, icon, name} = section;
 
