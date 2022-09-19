@@ -66,7 +66,7 @@ const Skills = () => {
       {icon: <TailwindSVG/>, name: 'Tailwind.css', level: <FormattedMessage id='tooltip-advanced' defaultMessage='Advanced'/>, type: ['front', 'library']},
       {icon: <CsharpSVG/>, name: 'C#', level: <FormattedMessage id='tooltip-intermediate' defaultMessage='Intermediate'/>, type: ['programming', 'back']},
       {icon: <DotNetSVG/>, name: '.NET', level: <FormattedMessage id='tooltip-intermediate' defaultMessage='Intermediate'/>, type: ['programming', 'back', 'library']},
-      {icon: <SqlSVG/>, name: 'SQL', level: <FormattedMessage id='tooltip-intermediate' defaultMessage='Intermediate'/>, type: ['database']}
+      {icon: <SqlSVG/>, name: 'SQL', level: <FormattedMessage id='tooltip-intermediate' defaultMessage='Intermediate'/>, type: ['database', 'programming']}
     ];
 
     let filteredArray = [];

@@ -93,40 +93,53 @@ const Contact = () => {
           <div className='bg-[#24252B] w-full sm:w-4/5 rounded-lg flex justify-center items-center flex-col mx-auto mb-11 p-5'>
             <h3 className='text-lg sm:text-2xl font-medium w-1/2 mb-10'><FormattedMessage id='form-label' defaultMessage='Contact me!'/></h3>
 
-            <form onSubmit={ onSubmit } className='flex flex-col justify-center outline-none w-4/5 text-xs sm:text-sm gap-10 laptop:w-1/2 '>
-              <input
-              type="text"
-              name='name'
-              value={mail.name}
-              onChange={handleOnChange}
-              placeholder={<FormattedMessage id='placeholder-name' defaultMessage='Full Name'/>}
-              className='bg-[#202023] outline-none rounded-md h-9 p-3 border-[#5F6177] border-[3px] input-shadow'
-              />
-              <input
-              type="email"
-              name='email'
-              value={mail.email}
-              onChange={handleOnChange}
-              placeholder={<FormattedMessage id='placeholder-email' defaultMessage='E-Mail'/>}
-              className='bg-[#202023] outline-none rounded-md h-9 p-3 border-[#5F6177] border-[3px] input-shadow'
-              />
-              <input
-              type="text"
-              name='subject'
-              value={mail.subject}
-              onChange={handleOnChange}
-              placeholder={<FormattedMessage id='placeholder-subject' defaultMessage='Subject'/>}
-              className='bg-[#202023] outline-none rounded-md h-9 p-3 border-[#5F6177] border-[3px] input-shadow'
-              />
-              <textarea
-              type="textarea"
-              name='message'
-              value={mail.message}
-              onChange={handleOnChange}
-              style={{resize: 'none'}}
-              placeholder={<FormattedMessage id='placeholder-message' defaultMessage='Message...'/>}
-              className='text-start bg-[#202023] outline-none rounded-md p-3 border-[#5F6177] border-[3px] input-shadow h-36'
-              ></textarea>
+            <form onSubmit={ onSubmit } className='flex flex-col justify-center outline-none w-4/5 text-xs sm:text-sm gap-6 laptop:w-1/2 '>
+              <div className='flex flex-col'>
+                <label htmlFor="" className='mb-1 ml-3'><FormattedMessage id='label-name' defaultMessage='Full Name'/></label>
+                <input
+                type="text"
+                name='name'
+                value={mail.name}
+                onChange={handleOnChange}
+                placeholder='...'
+                className='bg-[#202023] outline-none rounded-md h-9 p-3 border-[#5F6177] border-[3px] input-shadow'
+                />
+              </div>
+              <div className='flex flex-col'>
+                <label htmlFor="" className='mb-1 ml-3'><FormattedMessage id='label-email' defaultMessage='E-Mail'/></label>
+                <input
+                type="email"
+                name='email'
+                value={mail.email}
+                onChange={handleOnChange}
+                placeholder='...'
+                className='bg-[#202023] outline-none rounded-md h-9 p-3 border-[#5F6177] border-[3px] input-shadow'
+                />
+              </div>
+              <div className='flex flex-col'>
+                <label htmlFor="" className='mb-1 ml-3'><FormattedMessage id='label-subject' defaultMessage='Subject'/></label>
+                <input
+                type="text"
+                name='subject'
+                value={mail.subject}
+                onChange={handleOnChange}
+                placeholder='...'
+                className='bg-[#202023] outline-none rounded-md h-9 p-3 border-[#5F6177] border-[3px] input-shadow'
+                />
+              </div>
+              <div className='flex flex-col'>
+                <label htmlFor="" className='mb-1 ml-3'><FormattedMessage id='label-message' defaultMessage='Message'/></label>
+                <textarea
+                type="textarea"
+                name='message'
+                value={mail.message}
+                onChange={handleOnChange}
+                style={{resize: 'none'}}
+                placeholder='...'
+                className='text-start bg-[#202023] outline-none rounded-md p-3 border-[#5F6177] border-[3px] input-shadow h-36'
+                ></textarea>
+              </div>
+              
               
               { error ? <ErrorMsg/> : null }
               { success ? <SuccessMsg/> : null }
