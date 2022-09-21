@@ -25,10 +25,10 @@ const Hero = () => {
             <FormattedMessage id='hero-paragraph' defaultMessage='Hello there! I am Octavio,'/>
             </h3> <br/>
             <h1 className='text-4xl md:text-6xl text-title text-center font-medium mb-3 lg:text-7xl'>
-            <FormattedMessage id='hero-title' defaultMessage='Software Developer'/>
+            <FormattedMessage id='hero-title' defaultMessage='Front-End Developer'/>
             </h1> <br/>
             <h3 className='text-lg md:text-xl text-[#D7D7D7] text-center font-light'>
-            <FormattedMessage id='hero-other' defaultMessage='Front-End Developer | Programmer | Web Designer'/>
+            <FormattedMessage id='hero-other' defaultMessage='Software Developer | Programmer | Web Designer'/>
             </h3>
             <div className='flex flex-row justify-center items-center gap-14 mt-20 w-min h-min mx-auto'>
               <a href='https://www.linkedin.com/in/octaviosancho-dev/' target='_blank' rel='noreferrer' className='logo duration-200'><LinkedIn width={'45'}/></a>
