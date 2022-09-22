@@ -24,6 +24,7 @@ import TailwindSVG from './svg/Skills/TailwindSVG';
 import CsharpSVG from './svg/Skills/CsharpSVG';
 import DotNetSVG from './svg/Skills/DotNetSVG';
 import SqlSVG from './svg/Skills/SqlSVG';
+import SqlServer from './svg/Skills/SqlServer';
 
 const Skills = () => {
 
@@ -66,7 +67,8 @@ const Skills = () => {
       {icon: <TailwindSVG/>, name: 'Tailwind.css', level: <FormattedMessage id='tooltip-advanced' defaultMessage='Advanced'/>, type: ['front', 'library']},
       {icon: <CsharpSVG/>, name: 'C#', level: <FormattedMessage id='tooltip-intermediate' defaultMessage='Intermediate'/>, type: ['programming', 'back']},
       {icon: <DotNetSVG/>, name: '.NET', level: <FormattedMessage id='tooltip-intermediate' defaultMessage='Intermediate'/>, type: ['programming', 'back', 'library']},
-      {icon: <SqlSVG/>, name: 'SQL', level: <FormattedMessage id='tooltip-intermediate' defaultMessage='Intermediate'/>, type: ['database', 'programming']}
+      {icon: <SqlSVG/>, name: 'SQL', level: <FormattedMessage id='tooltip-intermediate' defaultMessage='Intermediate'/>, type: ['database', 'programming']},
+      {icon: <SqlServer/>, name: 'SQL Server', level: <FormattedMessage id='tooltip-intermediate' defaultMessage='Intermediate'/>, type: ['database', 'programming']}
     ];
 
     let filteredArray = [];
