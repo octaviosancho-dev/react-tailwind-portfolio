@@ -5,7 +5,6 @@ import Button from './helpers/Button';
 import Link from './svg/Link';
 import Code from './svg/Code';
 import Spinner from './helpers/Spinner';
-import dotnet from '../assets/img/icons/dotnet.png'
 
 // Firebase / Firestore
 import { db } from '../firebase/firebaseConfig';
