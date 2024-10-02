@@ -1,14 +1,14 @@
 # React Personal Portfolio
 
-## Descripción
+## Description
 
-Portfolio personal, invito a visitar mi sitio web donde figuran todos mis trabajos realizados y más acerca de mi. Este proyecto lo diseñe en Figma y desarrolle su maquetado y funcionalidades en React.js junto a Tailwind.css, también inclui una peticion a una base de datos creada en Google Firebase donde alojo la informacion de cada uno de mis proyectos.
+I invite you to visit my website where you can find all my completed works and more about me. I designed this project in Figma and developed its layout and functionalities using React.js along with Tailwind.css. I also included a request to a database created in Google Firebase, where I store the information of each of my projects.
 
-## Link al Sitio
+## Site
 
 ➡ https://octaviosancho-dev-portfolio.netlify.app/
 
-## Tecnologías utilizadas
+## Used tools
 
 <a href="https://www.w3.org/react/" target="_blank" rel="noreferrer"> <img src="https://reactnative.dev/img/header_logo.svg" alt="reactnative" width="40" height="40"/> </a>
 <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a>
