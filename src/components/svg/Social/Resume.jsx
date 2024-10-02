@@ -2,8 +2,12 @@ import React from 'react'
 
 const Resume = ({width}) => {
   return (
-    <svg width={width} viewBox="0 0 37 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M25 9.78406H35M25 15.64H33M25 21.496H32M2 29.304V26.376C2 24.8229 2.59702 23.3334 3.65973 22.2352C4.72243 21.137 6.16377 20.52 7.66667 20.52H13.3333C14.8362 20.52 16.2776 21.137 17.3403 22.2352C18.403 23.3334 19 24.8229 19 26.376V29.304M17 8.31995C17 11.8236 14.0899 14.664 10.5 14.664C6.91015 14.664 4 11.8236 4 8.31995C4 4.81626 6.91015 1.97595 10.5 1.97595C14.0899 1.97595 17 4.81626 17 8.31995Z" stroke="#5F6177" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-file-cv" width={width} height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#5F6177" fill="none" strokeLinecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+      <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
+      <path d="M11 12.5a1.5 1.5 0 0 0 -3 0v3a1.5 1.5 0 0 0 3 0" />
+      <path d="M13 11l1.5 6l1.5 -6" />
     </svg>
   )
 }

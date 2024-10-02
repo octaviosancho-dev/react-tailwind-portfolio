@@ -2,8 +2,8 @@ import React, { useState, createContext } from 'react';
 
 import { IntlProvider } from 'react-intl';
 
-import EnglishText from '../languages/en-US.json';
-import SpanishText from '../languages/es-MX.json';
+import EnglishText from '../lang/en-US.json';
+import SpanishText from '../lang/es-MX.json';
 
 const langContext = createContext();
 

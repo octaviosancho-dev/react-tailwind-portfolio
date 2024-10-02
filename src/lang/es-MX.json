@@ -1,0 +1,44 @@
+{
+  
+  "navbar-home": "Inicio",
+  "navbar-experience": "Experiencia",
+  "navbar-skills": "Habilidades",
+  "navbar-projects": "Proyectos",
+  "navbar-hire": "Contacto",
+
+  "side-home": "Inicio",
+  "side-experience": "Experiencia",
+  "side-skills": "Habilidades",
+  "side-projects": "Proyectos",
+  "side-contact": "Contacto",
+
+  "hero-title": "Desarrollador .NET & React",
+  "hero-paragraph": "Hola! Soy Octavio,",
+
+  "experience-title": "Experiencia",
+
+  "skills-title": "Tecnologías",
+  "filter-all": "Todos",
+  "filter-programming": "Programación",
+  "filter-devops": "DevOps",
+  "filter-libraries": "Frameworks/Librerías",
+  "filter-database": "Bases de datos",
+  "tooltip-intermediate": "Intermedio",
+  "tooltip-advanced": "Avanzado",
+
+  "projects-title": "Proyectos",
+  "project-technologies": "Tecnologías utilizadas:",
+  "project-site-btn": "Demo",
+  "project-code-btn": "Código",
+
+  "contact-title": "Contacto",
+  "form-label": "Enviame un Email",
+  "label-name": "Nombre completo",
+  "label-email": "Correo",
+  "label-subject": "Asunto",
+  "label-message": "Mensaje",
+  "send-btn": "Enviar",
+
+  "footer-design": "Diseñado en",
+  "footer-development": "Desarrollado en"
+}

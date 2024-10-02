@@ -91,7 +91,7 @@ const Contact = () => {
         <div className='z-50 w-full text-gray-300'>
           <h2 className='mb-12 w-3/4 md:text-2xl lg:text-3xl font-bold text-text md:mb-12 section-title'><FormattedMessage id='contact-title' defaultMessage='Get in touch'/></h2>
           <div className='bg-[#24252B] w-full sm:w-4/5 rounded-lg flex justify-center items-center flex-col mx-auto mb-11 p-5'>
-            <h3 className='text-lg sm:text-2xl font-medium w-1/2 mb-10'><FormattedMessage id='form-label' defaultMessage='Contact me!'/></h3>
+            <h3 className='text-lg sm:text-2xl font-medium w-1/2 mb-10'><FormattedMessage id='form-label' defaultMessage='Contact'/></h3>
 
             <form onSubmit={ onSubmit } className='flex flex-col justify-center outline-none w-4/5 text-xs sm:text-sm gap-6 laptop:w-1/2 '>
               <div className='flex flex-col'>
@@ -154,7 +154,7 @@ const Contact = () => {
               <a href="https://www.linkedin.com/in/octaviosancho-dev/" target='_blank' rel="noreferrer"><ContactLinkedIn/></a>
               <a href="https://github.com/octaviosancho-dev" target='_blank' rel="noreferrer"><ContactGithub/></a>
               <a href="https://goo.gl/maps/bc6PHC8bkAjURgws9" target='_blank' rel="noreferrer"><ContactLocation/></a>
-              <a href="https://drive.google.com/file/d/1vuzu-KvwytBEqQARhJV592ETWhoAljQv/view?usp=sharing" target='_blank' rel="noreferrer"><ContactResume/></a>
+              <a href="https://drive.google.com/file/d/1UZmdSBW8sPlK6KdiP3IKrBsqoqZmqEJG/view?usp=drive_link" target='_blank' rel="noreferrer"><ContactResume/></a>
             </div>
           </div>
         </div>

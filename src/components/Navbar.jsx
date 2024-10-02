@@ -9,7 +9,7 @@ import CloseMenu from './svg/Navigation/CloseMenu';
 import HomeIcon from './svg/Navigation/HomeIcon';
 import AboutIcon from '../components/svg/Navigation/AboutIcon';
 import SkillsIcon from './svg/Navigation/SkillsIcon';
-import WorkIcon from './svg/Navigation/WorkIcon';
+import ProjectsIcon from './svg/Navigation/ProjectsIcon';
 import ContactIcon from './svg/Navigation/ContactIcon';
 
 import LinkedIn from './svg/Social/Linkedin';
@@ -30,10 +30,10 @@ const Navbar = () => {
   
   const sections = [
     {route: '#', icon: <HomeIcon/>, name: <FormattedMessage id='side-home' defaultMessage='Home'/>},
-    {route: '#about', icon: <AboutIcon/>, name: <FormattedMessage id='side-about' defaultMessage='About me'/>},
+    {route: '#experience', icon: <AboutIcon/>, name: <FormattedMessage id='side-experience' defaultMessage='Experience'/>},
     {route: '#skills', icon: <SkillsIcon/>, name: <FormattedMessage id='side-skills' defaultMessage='Skills'/>},
-    {route: '#work', icon: <WorkIcon/>, name: <FormattedMessage id='side-work' defaultMessage='My work'/>},
-    {route: '#contact', icon: <ContactIcon/>, name: <FormattedMessage id='side-contact' defaultMessage='Contact me'/>}
+    {route: '#projects', icon: <ProjectsIcon/>, name: <FormattedMessage id='side-projects' defaultMessage='Projects'/>},
+    {route: '#contact', icon: <ContactIcon/>, name: <FormattedMessage id='side-contact' defaultMessage='Contact'/>}
   ];
 
   const [active, setActive] = useState(0);
@@ -78,31 +78,31 @@ const Navbar = () => {
           <NavLink smooth to='#' className='font-medium text-[#979EDB] cursor-pointer'>
             <FormattedMessage
               id="navbar-home"
-              defaultMessage='Homedefault'
+              defaultMessage='Home'
             />
           </NavLink>
-          <NavLink smooth scroll={ el => scrollWithOffset(el) } to='#about' className='duration-300 hover:text-light-text cursor-pointer'>
+          <NavLink smooth scroll={ el => scrollWithOffset(el) } to='#experience' className='duration-300 hover:text-light-text cursor-pointer'>
             <FormattedMessage
-              id='navbar-about'
-              defaultMessage='About me def'
+              id='navbar-experience'
+              defaultMessage='Experience'
             />
           </NavLink>
           <NavLink smooth scroll={ el => scrollWithOffset(el) } to='#skills' className='duration-300 hover:text-light-text cursor-pointer'>
             <FormattedMessage
               id='navbar-skills'
-              defaultMessage='Tech skills'
+              defaultMessage='Skills'
             />
           </NavLink>
-          <NavLink smooth scroll={ el => scrollWithOffset(el) } to='#work' className='duration-300 hover:text-light-text cursor-pointer'>
+          <NavLink smooth scroll={ el => scrollWithOffset(el) } to='#projects' className='duration-300 hover:text-light-text cursor-pointer'>
             <FormattedMessage
-              id="navbar-work"
-              defaultMessage='My work'
+              id="navbar-projects"
+              defaultMessage='Projects'
             />
           </NavLink>
           <NavLink smooth scroll={ el => scrollWithOffset(el) } to='#contact' className='md:hidden laptop:block mx-5 z-20'><Button icon={<Mail/>} text={
           <FormattedMessage
             id='navbar-hire'
-            defaultMessage='Hire me!'
+            defaultMessage='Contact'
           />} width={'w-auto'} height={'h-[45px]'}/></NavLink>
           <div className='hidden md:flex flex-col gap-3 my-auto absolute -right-10'>
             <div className='block w-6 rounded-sm overflow-hidden cursor-pointer' onClick={ () => setLanguage('es-MX')}><Spain/></div>
@@ -125,15 +125,15 @@ const Navbar = () => {
             <NavLink smooth to='#' className='font-medium text-[#979EDB] cursor-pointer' onClick={ () => setMenu(!menu) }>
               <FormattedMessage id='side-home' defaultMessage='Home'/>
             </NavLink>
-            <NavLink smooth scroll={ el => scrollWithOffset(el) } to='#about' className='duration-300 hover:text-light-text cursor-pointer' onClick={ () => setMenu(!menu) }>
-              <FormattedMessage id='side-about' defaultMessage='About me'/>
+            <NavLink smooth scroll={ el => scrollWithOffset(el) } to='#experience' className='duration-300 hover:text-light-text cursor-pointer' onClick={ () => setMenu(!menu) }>
+              <FormattedMessage id='side-experience' defaultMessage='Experience'/>
             </NavLink>
             <NavLink smooth scroll={ el => scrollWithOffset(el) } to='#skills' className='duration-300 hover:text-light-text cursor-pointer' onClick={ () => setMenu(!menu) }>
               <FormattedMessage id='side-skills' defaultMessage='Tech skills'/>
             </NavLink>
-            <NavLink smooth scroll={ el => scrollWithOffset(el) } to='#work' className='duration-300 hover:text-light-text cursor-pointer' onClick={ () => setMenu(!menu) }>
-              <FormattedMessage id='side-work' defaultMessage='My work'/></NavLink>
-            <NavLink smooth scroll={ el => scrollWithOffset(el) } to='#contact' className='my-5' onClick={ () => setMenu(!menu) }><Button icon={<Mail/>} text={<FormattedMessage id='navbar-hire' defaultMessage='Hire me!'/>} width={'w-auto'} height={'h-[45px]'}/></NavLink>
+            <NavLink smooth scroll={ el => scrollWithOffset(el) } to='#projects' className='duration-300 hover:text-light-text cursor-pointer' onClick={ () => setMenu(!menu) }>
+              <FormattedMessage id='side-projects' defaultMessage='Projects'/></NavLink>
+            <NavLink smooth scroll={ el => scrollWithOffset(el) } to='#contact' className='my-5' onClick={ () => setMenu(!menu) }><Button icon={<Mail/>} text={<FormattedMessage id='navbar-hire' defaultMessage='Contact'/>} width={'w-auto'} height={'h-[45px]'}/></NavLink>
             <div className='flex flex-row gap-6 ml-3'>
               <button className='block w-8 rounded-sm overflow-hidden cursor-pointer' onClick={ () => setLanguage('es-MX')}><Spain/></button>
               <button className='block w-8 rounded-sm overflow-hidden cursor-pointer' onClick={ () => setLanguage('en-US')}><UnitedKingdom/></button>

@@ -25,19 +25,16 @@ const Hero = () => {
             <FormattedMessage id='hero-paragraph' defaultMessage='Hello there! I am Octavio,'/>
             </h3> <br/>
             <h1 className='text-4xl md:text-6xl text-title text-center font-medium mb-3 lg:text-7xl'>
-            <FormattedMessage id='hero-title' defaultMessage='Front-End Developer'/>
+            <FormattedMessage id='hero-title' defaultMessage='.NET & React Developer'/>
             </h1> <br/>
-            <h3 className='text-lg md:text-xl text-[#D7D7D7] text-center font-light'>
-            <FormattedMessage id='hero-other' defaultMessage='Software Developer | Programmer | Web Designer'/>
-            </h3>
-            <div className='flex flex-row justify-center items-center gap-14 mt-20 w-min h-min mx-auto'>
+            <div className='flex flex-row justify-center items-center gap-14 mt-10 w-min h-min mx-auto'>
               <a href='https://www.linkedin.com/in/octaviosancho-dev/' target='_blank' rel='noreferrer' className='logo duration-200'><LinkedIn width={'45'}/></a>
               <a href='https://github.com/octaviosancho-dev' target='_blank' rel='noreferrer' className='logo duration-200'><Github width={'45'}/></a>
-              <a href='https://drive.google.com/file/d/1vuzu-KvwytBEqQARhJV592ETWhoAljQv/view?usp=sharing' target='_blank' rel='noreferrer' className='logo duration-200'><Resume width={'50'}/></a>
+              <a href='https://drive.google.com/file/d/1UZmdSBW8sPlK6KdiP3IKrBsqoqZmqEJG/view?usp=drive_link' target='_blank' rel='noreferrer' className='logo duration-200'><Resume width={'45'}/></a>
             </div>
           </div>
         </div>
-        <div className='w-full relative top-[30vh] flex justify-center arrow duration-700 opacity-0'>
+        <div className='w-3/6 mx-auto relative top-[30vh] flex justify-center arrow duration-700 opacity-0'>
           <Arrow/>
         </div>
       </div>

@@ -17,17 +17,17 @@ module.exports = {
       colors: {
         'body': '#202023',
         'purple': '#4957D2',
-        'title': '#979EDB',
+        'title': '#7863FE',
         'input': '#202023',
         'input-border': '#5F6177',
         'text': '#EDEDED',
-        'light-text': '#B2B7E1'
+        'light-text': '#8a92d4'
       },
       screens: {
         'laptop': '1100px',
       },
       fontFamily: {
-        sans: ['Rubik', 'sans-serif']
+        sans: ['Space Grotesk', 'sans-serif']
       }
     },
   },
