@@ -9,7 +9,6 @@ import Tooltip from './helpers/Tooltip';
 
 import JavaScriptSVG from './svg/Skills/JavaScriptSVG';
 import ReactSVG from './svg/Skills/ReactSVG';
-import NodeSVG from './svg/Skills/NodeSVG';
 import GitSVG from './svg/Skills/GitSVG';
 import CssSVG from './svg/Skills/CssSVG';
 import HtmlSVG from './svg/Skills/HtmlSVG';
